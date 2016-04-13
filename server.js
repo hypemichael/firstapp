@@ -8,6 +8,7 @@ var parser = new xml2js.Parser({explicitArray : false});
 
  
 http.createServer(function(req, res) {  
+ res.setHeader('Access-Control-Allow-Origin', '*');
   var url = 'http://pass.gear.host/Social_Studies.xml';
   
   request(url, function (error, response, body) {
